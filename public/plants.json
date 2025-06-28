@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Peace Lily Glow",
+    "price": 35.99,
+    "color": "yellow-600",
+    "coverImg": "/img/1.jpg",
+    "images": ["/img/1.jpg", "/img/2.jpg"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices."
+  },
+  {
+    "id": 2,
+    "name": "Orchid Moonlight",
+    "price": 49.99,
+    "color": "red-500",
+    "coverImg": "/img/3.jpg",
+    "images": ["/img/3.jpg", "/img/4.jpg"],
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate. Excepteur sint occaecat cupidatat."
+  },
+  {
+    "id": 3,
+    "name": "Lavender Mist",
+    "price": 28.5,
+    "color": "purple-900",
+    "coverImg": "/img/5.jpg",
+    "images": ["/img/5.jpg", "/img/6.jpg"],
+    "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
+  },
+  {
+    "id": 4,
+    "name": "Snake Plant Edge",
+    "price": 42.75,
+    "color": "green-800",
+    "coverImg": "/img/7.jpg",
+    "images": ["/img/7.jpg", "/img/8.jpg"],
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Duis aute irure dolor."
+  },
+  {
+    "id": 5,
+    "name": "Ficus Leaf Star",
+    "price": 89.99,
+    "color": "emerald-600",
+    "coverImg": "/img/9.jpg",
+    "images": ["/img/9.jpg", "/img/10.jpg"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices."
+  },
+  {
+    "id": 6,
+    "name": "Monstera Green Wave",
+    "price": 65.0,
+    "color": "yellow-300",
+    "coverImg": "/img/11.jpg",
+    "images": ["/img/11.jpg", "/img/12.jpg"],
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate. Excepteur sint occaecat cupidatat."
+  },
+  {
+    "id": 7,
+    "name": "Begonia Red Charm",
+    "price": 32.25,
+    "color": "red-400",
+    "coverImg": "/img/13.jpg",
+    "images": ["/img/13.jpg", "/img/14.jpg"],
+    "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
+  },
+  {
+    "id": 8,
+    "name": "Anthurium Pink Flame",
+    "price": 55.5,
+    "color": "pink-600",
+    "coverImg": "/img/15.jpg",
+    "images": ["/img/15.jpg", "/img/16.jpg"],
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Duis aute irure dolor."
+  },
+  {
+    "id": 9,
+    "name": "Calathea Leaf Dance",
+    "price": 78.99,
+    "color": "violet-500",
+    "coverImg": "/img/17.jpg",
+    "images": ["/img/17.jpg", "/img/18.jpg"],
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse."
+  },
+  {
+    "id": 10,
+    "name": "ZZ Plant Zen",
+    "price": 39.99,
+    "color": "gray-900",
+    "coverImg": "/img/19.jpg",
+    "images": ["/img/19.jpg", "/img/20.jpg"],
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. Duis aute irure dolor in reprehenderit in voluptate. Excepteur sint occaecat."
+  },
+  {
+    "id": 11,
+    "name": "Spathiphyllum White Star",
+    "price": 110.0,
+    "color": "pink-700",
+    "coverImg": "/img/21.jpg",
+    "images": ["/img/21.jpg", "/img/22.jpg"],
+    "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
+  },
+  {
+    "id": 12,
+    "name": "Philodendron Vine Trail",
+    "price": 135.75,
+    "color": "blue-300",
+    "coverImg": "/img/23.jpg",
+    "images": ["/img/23.jpg", "/img/24.jpg"],
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Duis aute irure dolor."
+  }
+]
