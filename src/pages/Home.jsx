@@ -44,6 +44,40 @@ const Home = () => {
         </div>
       </div>
 
+      {/* Featured Plants */}
+      <div className='mx-4 md:mx-12 lg:max-w-[80%] lg:mx-auto pt-12'>
+        <h2 className='font-heading text-3xl text-teal-900 font-bold text-center mb-4'>
+          Curated Plant Picks
+        </h2>
+        <hr className='border-teal-600 border-2 rounded mx-auto mb-8 md:mb-16 w-[50px]' />
+
+        <div className='flex  overflow-x-auto space-x-6 pb-4 snap-x snap-mandatory hide-scrollbar'>
+          {plants
+            .filter(plant => [9, 5, 8].includes(plant.id))
+            .sort((a, b) => [9, 5, 8].indexOf(a.id) - [9, 5, 8].indexOf(b.id))
+            .map(plant => (
+              <div
+                key={plant.id}
+                className='bg-teal-800 overflow-hidden rounded-lg flex flex-row items-start md:items-center min-w-[300px] md:min-w-[450px] snap-center'
+              >
+                <img
+                  src={plant.images[1]}
+                  alt={plant.name}
+                  className='w-2/5 h-48 object-cover md:mr-4'
+                />
+                <div className='text-white p-4'>
+                  <h3 className='font-heading text-xl italic'>{plant.name}</h3>
+                  <p className='text-sm mt-2'>
+                    {plant.description.substring(0, 50)}...
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
+
+        <p className='text-center'>&lt;&lt; Swipe to see more &gt;&gt;</p>
+      </div>
+
       {/* Plants List */}
       <div
         id='shop-section'
