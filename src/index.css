@@ -8,3 +8,7 @@
   --font-logo: 'Fleur De Leah', cursive;
   --font-heading: 'Playfair Display', serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
