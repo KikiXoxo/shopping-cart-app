@@ -10,7 +10,7 @@ const Navbar = () => {
   const totalItems = cart.length;
 
   return (
-    <nav className='w-full bg-teal-900'>
+    <nav className='fixed top-0 left-0 z-50 w-full bg-teal-900'>
       <div className='max-w-[80%] mx-auto py-4 flex text-white justify-between items-center'>
         <Link to='/'>
           <h1 className='font-logo text-5xl'>PotStop</h1>
