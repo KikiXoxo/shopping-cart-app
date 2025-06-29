@@ -63,7 +63,7 @@ const Home = () => {
           </p>
           <a
             href='#shop-section'
-            className='inline-block bg-teal-600 text-white text-lg uppercase py-2 px-12 rounded hover:bg-teal-700 transition-transform duration-300 hover:scale-105 font-semibold'
+            className='inline-block bg-teal-600 text-white uppercase py-2 px-12 rounded hover:bg-teal-700 transition-transform duration-300 hover:scale-105 font-semibold'
           >
             Shop Now
           </a>
