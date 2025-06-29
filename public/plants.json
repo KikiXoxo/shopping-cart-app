@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Peace Lily Glow",
     "price": 35.99,
-    "color": "yellow-600",
+    "color": "yellow-400",
     "coverImg": "/img/1.jpg",
     "images": ["/img/1.jpg", "/img/2.jpg"],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices."
@@ -57,7 +57,7 @@
     "id": 7,
     "name": "Begonia Red Charm",
     "price": 32.25,
-    "color": "red-400",
+    "color": "red-500",
     "coverImg": "/img/13.jpg",
     "images": ["/img/13.jpg", "/img/14.jpg"],
     "description": "Sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor."
@@ -66,7 +66,7 @@
     "id": 8,
     "name": "Anthurium Pink Flame",
     "price": 55.5,
-    "color": "pink-600",
+    "color": "pink-400",
     "coverImg": "/img/15.jpg",
     "images": ["/img/15.jpg", "/img/16.jpg"],
     "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa. Ut enim ad minim veniam, quis nostrud exercitation ullamco. Duis aute irure dolor."
