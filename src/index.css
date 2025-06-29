@@ -1,1 +1,10 @@
+@import '@fontsource/fleur-de-leah';
+@import '@fontsource/playfair-display';
+@import '@fontsource/playfair-display/700.css';
+
 @import 'tailwindcss';
+
+@theme {
+  --font-logo: 'Fleur De Leah', cursive;
+  --font-heading: 'Playfair Display', serif;
+}
