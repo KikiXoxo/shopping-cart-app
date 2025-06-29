@@ -16,13 +16,13 @@ const Navbar = () => {
           <Link to='/cart'>
             <MdOutlineShoppingCart className='text-3xl hover:text-teal-100' />
           </Link>
-          <Link
-            to='https://github.com/KikiXoxo'
+          <a
+            href='https://github.com/KikiXoxo'
             target='_blank'
             rel='noopener noreferrer'
           >
             <MdOutlineMarkEmailUnread className='text-3xl hover:text-teal-100' />
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
