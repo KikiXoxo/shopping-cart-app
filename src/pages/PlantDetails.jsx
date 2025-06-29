@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import NotFound from './NotFound';
+import { useCart } from '../context/CartContext';
 
 const PlantDetails = () => {
   const { id } = useParams();
   const [plant, setPlant] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchPlant = async () => {
@@ -89,8 +91,11 @@ const PlantDetails = () => {
               <span className='mr-2'>Color:</span>
               <div className={`w-12 h-6 rounded-sm bg-${plant.color}`}></div>
             </div>
-            <button className='w-full bg-teal-600 font-semibold text-white uppercase py-2 rounded hover:bg-teal-700'>
-              ADD TO CART
+            <button
+              onClick={() => addToCart(plant)}
+              className='w-full bg-teal-600 font-semibold text-white uppercase py-2 rounded hover:bg-teal-700 cursor-pointer'
+            >
+              Add To Cart
             </button>
             <Link
               to='/'

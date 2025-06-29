@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 
 const Home = () => {
   const [plants, setPlants] = useState([]);
   const scrollRef = useRef(null);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchPlants = async () => {
@@ -136,7 +138,10 @@ const Home = () => {
                 <p className='text-gray-800 font-bold mt-2'>
                   ${plant.price.toFixed(2)}
                 </p>
-                <button className='mt-3 w-full bg-teal-600 text-white font-semibold uppercase py-2 rounded hover:bg-teal-700 cursor-pointer'>
+                <button
+                  onClick={() => addToCart(plant)}
+                  className='mt-3 w-full bg-teal-600 text-white font-semibold uppercase py-2 rounded hover:bg-teal-700 cursor-pointer'
+                >
                   Add To Cart
                 </button>
                 <Link
