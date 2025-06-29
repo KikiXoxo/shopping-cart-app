@@ -1,12 +1,51 @@
-# React + Vite
+# PotStop (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A plant e-commerce app built with React and Vite, featuring a responsive shopping cart, coupon system, and plant details page. It uses a mock JSON file (plants.json) for plant data and React Context for state management.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Clone the repo
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/KikiXoxo/shopping-cart-app.git
+cd shopping-cart-app
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+The app will be available at http://localhost:5173.
+
+## 🌐 Production Preview
+
+Visit the live site at https://my-potstop.netlify.app.
+
+## ✨ Features
+
+- Responsive Cart: Desktop/tablet grid layout and mobile flex layout with add, remove, and quantity update functionality using React Context.
+- Cart Counter: Navbar badge showing the number of distinct cart items.
+- Coupon System: Input for coupon code validation (13.2% discount), with toast notifications for valid/invalid codes.
+- Plant Details: Dedicated page for viewing individual plant details.
+- Responsive Design: Optimized for mobile and tablet/desktop with consistent styling.
+- Toast Notifications: Feedback for cart actions and coupon application using react-toastify.
+
+## 🛠️ Dependencies
+
+- FontSource
+- React
+- React Router
+- React Icons
+- React Toastify
+- Tailwind CSS
+- Vite
+
+Install dependencies with npm install.
