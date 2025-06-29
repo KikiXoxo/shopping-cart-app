@@ -5,6 +5,8 @@ const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [couponCode, setCouponCode] = useState('');
+  const [isValidCoupon, setIsValidCoupon] = useState(false);
 
   const addToCart = plant => {
     setCart(prev => {
@@ -33,9 +35,30 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  const applyCoupon = code => {
+    const regex = /^POWERLABSx$/;
+    if (regex.test(code)) {
+      setIsValidCoupon(true);
+      setCouponCode(code);
+      toast.success('Coupon applied successfully!');
+    } else {
+      setIsValidCoupon(false);
+      setCouponCode('');
+      toast.error('Invalid coupon code!');
+    }
+  };
+
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, updateQuantity }}
+      value={{
+        cart,
+        addToCart,
+        removeFromCart,
+        updateQuantity,
+        couponCode,
+        isValidCoupon,
+        applyCoupon,
+      }}
     >
       {children}
     </CartContext.Provider>
