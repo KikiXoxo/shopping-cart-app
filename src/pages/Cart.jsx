@@ -1,14 +1,29 @@
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaTimes } from 'react-icons/fa';
 import { useCart } from '../context/CartContext';
+import { useState } from 'react';
 
 const Cart = () => {
-  const { cart, removeFromCart, updateQuantity } = useCart();
+  const {
+    cart,
+    removeFromCart,
+    updateQuantity,
+    couponCode,
+    isValidCoupon,
+    applyCoupon,
+  } = useCart();
+  const [inputCode, setInputCode] = useState('');
 
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
+  const discount = isValidCoupon ? totalPrice * 0.132 : 0;
+  const grandTotal = totalPrice - discount;
+
+  const handleApplyCoupon = () => {
+    applyCoupon(inputCode);
+  };
 
   if (cart.length === 0) {
     return (
@@ -167,6 +182,37 @@ const Cart = () => {
             <span className='mr-0 sm:mr-32'>Subtotal:</span>
             <span>${totalPrice.toFixed(2)}</span>
           </div>
+        </div>
+        <div className='flex justify-between sm:justify-end mt-6'>
+          <div className='flex flex-col  justify-between sm:justify-center items-center text-lg font-bold text-gray-800 w-full sm:w-auto gap-2'>
+            <span className='text-base font-semibold'>Coupon code:</span>
+            <div className='flex items-center justify-between gap-2 w-full'>
+              <input
+                type='text'
+                value={inputCode}
+                onChange={e => setInputCode(e.target.value)}
+                placeholder='Enter coupon code'
+                className='text-gray-800 text-sm py-1 px-2 rounded border border-gray-300 focus:outline-none focus:border-teal-600'
+              />
+              <button
+                onClick={handleApplyCoupon}
+                className='bg-teal-800 text-white font-semibold uppercase py-1 px-4 rounded hover:bg-teal-700 cursor-pointer'
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='flex justify-between sm:justify-end mt-4'>
+          <div className='flex justify-between sm:justify-center items-center text-lg font-bold text-gray-800 w-full sm:w-auto'>
+            <span className='mr-0 sm:mr-32'>Grand Total:</span>
+            <span>${grandTotal.toFixed(2)}</span>
+          </div>
+        </div>
+        <div className='flex justify-between sm:justify-end mt-4'>
+          <button className='bg-teal-800 text-white font-semibold uppercase py-2 px-6 rounded hover:bg-teal-700 w-full sm:w-[30%] cursor-pointer'>
+            Checkout
+          </button>
         </div>
       </div>
     </div>
