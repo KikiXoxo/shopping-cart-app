@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import NotFound from './NotFound';
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -13,11 +14,9 @@ const PlantDetails = () => {
         const response = await fetch('/plants.json');
         const data = await response.json();
         const foundPlant = data.find(p => p.id === parseInt(id));
-        if (!foundPlant) throw new Error('Plant not found');
-        setPlant(foundPlant);
+        setPlant(foundPlant); // Returns undefined if not found
       } catch (error) {
         console.error('Error fetching plant:', error);
-        throw error; // Triggers NotFound via errorElement
       }
     };
     fetchPlant();
@@ -35,7 +34,9 @@ const PlantDetails = () => {
     );
   };
 
-  if (!plant) return null;
+  if (plant === null) return <div>Loading...</div>; // Temporary loading state
+
+  if (plant === undefined) return <NotFound />;
 
   return (
     <div className='py-12'>
