@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [plants, setPlants] = useState([]);
+  const scrollRef = useRef(null);
 
   useEffect(() => {
     const fetchPlants = async () => {
@@ -16,6 +17,29 @@ const Home = () => {
     };
     fetchPlants();
   }, []);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    const scrollWidth = scrollContainer.scrollWidth / 3; // Each card
+    let scrollPosition = 0;
+
+    const scroll = () => {
+      scrollPosition += scrollWidth;
+      if (scrollPosition >= scrollContainer.scrollWidth) {
+        scrollPosition = 0; // Reset to start
+      }
+      scrollContainer.scrollTo({
+        left: scrollPosition,
+        behavior: 'smooth',
+      });
+    };
+
+    const interval = setInterval(scroll, 1500);
+
+    return () => clearInterval(interval); // Cleanup
+  }, [plants]);
 
   return (
     <div>
@@ -51,14 +75,17 @@ const Home = () => {
         </h2>
         <hr className='border-teal-600 border-2 rounded mx-auto mb-8 md:mb-16 w-[50px]' />
 
-        <div className='flex  overflow-x-auto space-x-6 pb-4 snap-x snap-mandatory hide-scrollbar'>
+        <div
+          className='flex  overflow-x-auto space-x-6 pb-4 snap-x snap-mandatory hide-scrollbar'
+          ref={scrollRef}
+        >
           {plants
             .filter(plant => [9, 5, 8].includes(plant.id))
             .sort((a, b) => [9, 5, 8].indexOf(a.id) - [9, 5, 8].indexOf(b.id))
             .map(plant => (
               <div
                 key={plant.id}
-                className='bg-teal-800 overflow-hidden rounded-lg flex flex-row items-start md:items-center min-w-[300px] md:min-w-[450px] snap-center'
+                className='bg-teal-800 overflow-hidden rounded-lg flex flex-row items-start md:items-center min-w-[300px] md:min-w-[450px] snap-center hover:scale-[1.02] hover:bg-teal-900 transition duration-300'
               >
                 <img
                   src={plant.images[1]}
