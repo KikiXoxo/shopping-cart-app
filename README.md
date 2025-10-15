@@ -33,7 +33,7 @@ Visit the live site at https://my-potstop.netlify.app.
 
 - Responsive Cart: Desktop/tablet grid layout and mobile flex layout with add, remove, and quantity update functionality using React Context.
 - Cart Counter: Navbar badge showing the number of distinct cart items.
-- Coupon System: Input for coupon code validation (13.2% discount), with toast notifications for valid/invalid codes.
+- Coupon System: Input for coupon code validation (13.2% discount), with toast notifications for valid/invalid codes (Valid code: BUNNY20).
 - Plant Details: Dedicated page for viewing individual plant details.
 - Responsive Design: Optimized for mobile and tablet/desktop with consistent styling.
 - Toast Notifications: Feedback for cart actions and coupon application using react-toastify.

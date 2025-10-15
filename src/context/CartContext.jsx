@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
   };
 
   const applyCoupon = code => {
-    const regex = /^POWERLABSx$/;
+    const regex = /^BUNNY20$/;
     if (regex.test(code)) {
       setIsValidCoupon(true);
       setCouponCode(code);
